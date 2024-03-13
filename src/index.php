@@ -2,8 +2,8 @@
 session_start();
 
 if (empty($_SESSION['is_auth'])){
-header('Location: /auth.php');
-exit();
+    header('Location: /auth.php');
+    exit();
 
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['theme'])) {
@@ -78,4 +78,3 @@ $theme = isset($_COOKIE['theme']) ? $_COOKIE['theme'] : 'light';
 </div>
 </body>
 </html>
-

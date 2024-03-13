@@ -3,16 +3,16 @@ session_start();
 
 
 if (!empty($_SESSION['is_auth'])){
-    header('Location: /');
+    header('Location: /index.php');
     exit();
 
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($_POST['email'] === 'makhinko180601@gmail.com' && $_POST['password'] === '12345678') {
+    if ($_POST['email'] === 'test@gmail.com' && $_POST['password'] === '12345678') {
         $_SESSION['is_auth'] = true;
 
-        header('Location: /');
+        header('Location: /index.php');
         exit();
     }
 }
